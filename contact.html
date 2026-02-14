@@ -11,6 +11,7 @@
     <header class="header">
         <div class="header-inner layout-fixed">
             <a href="index.html" class="logo">Gustese</a>
+            <button class="menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false">Menu</button>
             <nav class="nav">
                 <ul class="nav-list">
                     <li><a href="welcome.html">WELCOME</a></li>
@@ -72,5 +73,12 @@
             </nav>
         </div>
     </footer>
+    <script>
+        document.querySelector('.menu-toggle')?.addEventListener('click', function() {
+            this.classList.toggle('is-active');
+            document.querySelector('.nav').classList.toggle('is-open');
+            this.setAttribute('aria-expanded', this.classList.contains('is-active'));
+        });
+    </script>
 </body>
 </html>

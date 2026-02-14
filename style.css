@@ -133,6 +133,26 @@ a:hover {
     display: block;
 }
 
+/* Mobile menu toggle */
+.menu-toggle {
+    display: none;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-main);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.menu-toggle:hover {
+    color: var(--color-accent);
+}
+
 /* Header for inner pages — sticky variant */
 .body-inner-page .header {
     position: sticky;
@@ -808,8 +828,48 @@ a:hover {
         flex-direction: column;
     }
 
+    .menu-toggle {
+        display: flex;
+    }
+
     .nav {
-        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(250, 247, 242, 0.98);
+        border-bottom: 1px solid rgba(235, 228, 217, 0.9);
+        padding: 1rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+    }
+
+    .nav.is-open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        align-items: stretch;
+    }
+
+    .nav-list li {
+        border-bottom: 1px solid rgba(235, 228, 217, 0.6);
+    }
+
+    .nav-list li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-list a {
+        display: block;
+        padding: 1rem;
+        font-size: 0.95rem;
     }
 }
 
