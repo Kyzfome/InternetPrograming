@@ -1,0 +1,292 @@
+/* Contact page — modals, DataTables, auth */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.auth-block {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.auth-block.hidden {
+    display: none !important;
+}
+
+.user-name {
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.btn-auth {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: none;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-auth:hover {
+    background: var(--color-accent);
+    color: #fff;
+}
+
+.btn-add {
+    margin-bottom: 1rem;
+}
+
+/* Modal */
+.modal, .modal-overlay {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal-overlay {
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+}
+
+.modal.is-open,
+.modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    min-width: 320px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-muted);
+}
+
+.modal-close:hover {
+    color: var(--color-text);
+}
+
+.modal-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-tab {
+    padding: 0.5rem 1rem;
+    background: var(--color-surface);
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.modal-tab.active {
+    background: var(--color-accent);
+    color: #fff;
+}
+
+.auth-form input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-cream);
+    border-radius: 4px;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.auth-form .btn {
+    width: 100%;
+}
+
+/* DataTables — search & length select styling */
+#contactTable_wrapper .dataTables_length,
+#contactTable_wrapper .dataTables_filter {
+    margin-bottom: 1rem;
+}
+
+#contactTable_wrapper .dataTables_length label,
+#contactTable_wrapper .dataTables_filter label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+}
+
+#contactTable_wrapper .dataTables_length select {
+    padding: 0.5rem 2rem 0.5rem 0.75rem;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    border: 1px solid var(--color-cream);
+    border-radius: 6px;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235c5344' d='M6 8L1 3h10z'/%3E%3C/svg%3E") no-repeat right 0.6rem center;
+    background-size: 10px;
+    appearance: none;
+    cursor: pointer;
+    color: var(--color-text);
+}
+
+#contactTable_wrapper .dataTables_length select:hover,
+#contactTable_wrapper .dataTables_length select:focus {
+    border-color: var(--color-accent);
+    outline: none;
+}
+
+#contactTable_wrapper .dataTables_filter input {
+    padding: 0.6rem 1rem 0.6rem 2.5rem;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    border: 1px solid var(--color-cream);
+    border-radius: 6px;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235c5344' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") no-repeat 0.75rem center;
+    background-size: 16px;
+    min-width: 220px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#contactTable_wrapper .dataTables_filter input::placeholder {
+    color: var(--color-text-muted);
+}
+
+#contactTable_wrapper .dataTables_filter input:hover,
+#contactTable_wrapper .dataTables_filter input:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(139, 105, 20, 0.15);
+}
+
+#contactTable_wrapper .dataTables_info {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    padding-top: 0.75rem;
+}
+
+#contactTable_wrapper .dataTables_paginate {
+    padding-top: 0.75rem;
+}
+
+#contactTable_wrapper .dataTables_paginate .paginate_button {
+    padding: 0.4rem 0.8rem;
+    margin: 0 0.2rem;
+    border-radius: 4px;
+    font-family: var(--font-main) !important;
+}
+
+#contactTable_wrapper .dataTables_paginate .paginate_button.current {
+    background: var(--color-accent) !important;
+    border-color: var(--color-accent) !important;
+    color: #fff !important;
+}
+
+#contactTable_wrapper .dataTables_paginate .paginate_button:hover {
+    background: var(--color-surface) !important;
+    border-color: var(--color-accent) !important;
+    color: var(--color-accent) !important;
+}
+
+/* DataTables override */
+#contactTable_wrapper {
+    margin: 1rem 0;
+}
+
+#contactTable {
+    width: 100% !important;
+}
+
+#contactTable thead th {
+    background: var(--color-chalkboard);
+    color: #fff;
+    padding: 1rem;
+}
+
+#contactTable tbody td {
+    padding: 0.75rem 1rem;
+}
+
+#contactTable tbody td.editing {
+    padding: 0.25rem;
+}
+
+#contactTable tbody td input,
+#contactTable tbody td select {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.btn-save, .btn-cancel {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-save { background: var(--color-accent); color: #fff; }
+.btn-cancel { background: var(--color-text-muted); color: #fff; }
+
+.btn-edit, .btn-delete {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background: var(--color-accent);
+    color: #fff;
+}
+
+.btn-delete {
+    background: #c44;
+    color: #fff;
+}
+
+.error-msg {
+    color: #c44;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+.input-error {
+    border-color: #c44 !important;
+}
+
+.edit-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--color-cream);
+}

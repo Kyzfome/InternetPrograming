@@ -133,6 +133,131 @@ a:hover {
     display: block;
 }
 
+/* Header right — auth + social */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.auth-block {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.auth-block.hidden {
+    display: none !important;
+}
+
+.user-name {
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.btn-auth {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: none;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-auth:hover {
+    background: var(--color-accent);
+    color: #fff;
+}
+
+/* Auth modal */
+.modal, .modal-overlay {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal-overlay {
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+}
+
+.modal.is-open,
+.modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    min-width: 320px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-muted);
+}
+
+.modal-close:hover {
+    color: var(--color-text);
+}
+
+.modal-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-tab {
+    padding: 0.5rem 1rem;
+    background: var(--color-surface);
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.modal-tab.active {
+    background: var(--color-accent);
+    color: #fff;
+}
+
+.auth-form input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-cream);
+    border-radius: 4px;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.auth-form .btn {
+    width: 100%;
+}
+
 /* Mobile menu toggle */
 .menu-toggle {
     display: none;
