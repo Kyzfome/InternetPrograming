@@ -1,0 +1,829 @@
+/* Gustese — Bakery Website | Unified stylesheet matching PSD template */
+
+/* ============ VARIABLES ============ */
+:root {
+    --color-bg: #faf7f2;
+    --color-surface: #f5f0e8;
+    --color-cream: #ebe4d9;
+    --color-accent: #8b6914;
+    --color-accent-light: #a67c1a;
+    --color-text: #2c2416;
+    --color-text-muted: #5c5344;
+    --color-dark: #2d2a26;
+    --color-chalkboard: #1a1816;
+    --font-heading: "Playfair Display", "Alegreya", Georgia, serif;
+    --font-main: "Alegreya", Georgia, serif;
+    --width-fixed: 1140px;
+    --gap: 1.5rem;
+    --radius: 6px;
+}
+
+/* ============ RESET & BASE ============ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-accent-light);
+}
+
+/* ============ LAYOUT ============ */
+.layout-fixed {
+    width: 100%;
+    max-width: var(--width-fixed);
+    margin: 0 auto;
+    padding-left: var(--gap);
+    padding-right: var(--gap);
+}
+
+/* ============ HEADER ============ */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(250, 247, 242, 0.97);
+    border-bottom: 1px solid rgba(235, 228, 217, 0.9);
+}
+
+.header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+}
+
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--color-text);
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: var(--color-text-muted);
+}
+
+.nav-list a:hover {
+    color: var(--color-accent);
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    transition: color 0.2s;
+}
+
+.social-link:hover {
+    color: var(--color-accent);
+}
+
+.social-link svg {
+    display: block;
+}
+
+/* Header for inner pages — sticky variant */
+.body-inner-page .header {
+    position: sticky;
+    top: 0;
+}
+
+/* ============ HERO (Homepage) ============ */
+.hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(44, 36, 22, 0.35);
+    z-index: 1;
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    padding: 8rem 1.5rem 6rem;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.75rem, 5.5vw, 4.25rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.15;
+    margin: 0 0 0.75rem;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0 0 2rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.85rem 2.25rem;
+    font-family: var(--font-main);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-align: center;
+    border-radius: 50px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-hero {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-hero:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.btn-read,
+.btn-recipe {
+    background-color: var(--color-accent);
+    color: #fff;
+    border: none;
+}
+
+.btn-read:hover,
+.btn-recipe:hover {
+    background-color: var(--color-accent-light);
+}
+
+/* ============ ART OF CAKES ============ */
+.art-of-cakes {
+    padding: 5rem 0;
+    background-color: var(--color-bg);
+}
+
+.art-of-cakes-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-heading {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0 0 0.25rem;
+    color: var(--color-text);
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    color: var(--color-text-muted);
+    margin: 0 0 2.5rem;
+    text-align: center;
+}
+
+.art-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    width: 100%;
+}
+
+.art-description {
+    margin: 0 0 1.25rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    font-size: 0.95rem;
+}
+
+.chef-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+    color: var(--color-text);
+}
+
+.chef-profiles {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.chef-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid var(--color-cream);
+}
+
+.art-quote {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--color-accent);
+    margin: 0;
+}
+
+.art-images {
+    position: relative;
+}
+
+.art-grid-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+}
+
+.art-grid-images img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+.art-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 0.9rem 1.25rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--color-accent);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ============ TASTY PANCAKES ============ */
+.tasty-pancakes {
+    padding: 5rem 0;
+    background-color: var(--color-surface);
+    position: relative;
+}
+
+.tasty-inner {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tasty-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    background-image: url("https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=900");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+}
+
+.tasty-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #fff;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(44, 36, 22, 0.12);
+    max-width: 880px;
+}
+
+.tasty-card-image {
+    min-height: 340px;
+}
+
+.tasty-card-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    object-fit: cover;
+}
+
+.tasty-card-content {
+    padding: 2.5rem;
+    position: relative;
+}
+
+.tasty-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+}
+
+.tasty-title {
+    font-family: var(--font-heading);
+    font-size: 1.65rem;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0 0 0.25rem;
+    color: var(--color-text);
+}
+
+.tasty-subtitle {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--color-accent);
+    margin: 0 0 1rem;
+}
+
+.tasty-description {
+    margin: 0 0 1.75rem;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.tasty-carousel {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-cream);
+    cursor: pointer;
+}
+
+.carousel-dot.active {
+    background-color: var(--color-accent);
+}
+
+/* ============ BREAKFAST ============ */
+.breakfast {
+    background-color: var(--color-chalkboard);
+    padding: 5rem 0;
+    color: #fff;
+}
+
+.breakfast-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.breakfast-title {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0 0 0.25rem;
+}
+
+.breakfast-tagline {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0 0 1.5rem;
+}
+
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-list li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1rem 0;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-name {
+    font-size: 1.05rem;
+}
+
+.menu-price {
+    font-weight: 600;
+    color: var(--color-accent-light);
+}
+
+.breakfast-card {
+    background: #fff;
+    color: var(--color-text);
+    padding: 2.25rem;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.card-est {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--color-text-muted);
+    margin: 0 0 0.35rem;
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0 0 0.75rem;
+}
+
+.card-text {
+    margin: 0 0 1.25rem;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ============ JIBARITO ============ */
+.jibarito {
+    padding: 5rem 0;
+    background-color: var(--color-bg);
+}
+
+.jibarito-inner .section-heading {
+    margin-bottom: 0.25rem;
+}
+
+.jibarito-inner .section-subtitle {
+    margin-bottom: 2.5rem;
+}
+
+.jibarito-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 3.5rem;
+    align-items: start;
+}
+
+.jibarito-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.feature-item {
+    text-align: left;
+}
+
+.feature-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.4rem;
+}
+
+.feature-item h3 {
+    font-family: var(--font-main);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 0.4rem;
+    color: var(--color-text);
+}
+
+.feature-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+}
+
+.jibarito-main {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+}
+
+.jibarito-image-wrap {
+    flex: 1;
+    min-width: 0;
+}
+
+.jibarito-image-wrap img {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 28px rgba(44, 36, 22, 0.14);
+}
+
+.btn-recipe {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.jibarito-times {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.time-box {
+    background-color: var(--color-surface);
+    padding: 0.9rem 1.1rem;
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.time-label {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--color-text-muted);
+}
+
+.time-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+/* ============ FOOTER ============ */
+.footer {
+    padding: 2.25rem 0;
+    background-color: var(--color-dark);
+    color: #fff;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-nav a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-nav a:hover {
+    color: #fff;
+}
+
+.footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* ============ INNER PAGES ============ */
+.page-hero {
+    position: relative;
+    min-height: 42vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.page-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(44, 36, 22, 0.5);
+    z-index: 1;
+}
+
+.page-hero-inner {
+    position: relative;
+    z-index: 2;
+    padding: 6rem 1.5rem 4rem;
+}
+
+.page-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 400;
+    font-style: italic;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.page-hero-subtitle {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 0.5rem 0 0;
+    letter-spacing: 0.12em;
+}
+
+.page-main {
+    padding: 4rem 0;
+    background-color: var(--color-bg);
+}
+
+.page-content {
+    padding: 1rem 0;
+}
+
+.page-content h1 {
+    font-family: var(--font-heading);
+    font-size: 1.85rem;
+    color: var(--color-text);
+    margin: 0 0 0.5rem;
+    border-bottom: 2px solid var(--color-cream);
+    padding-bottom: 0.5rem;
+}
+
+.page-content h2 {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--color-accent);
+    margin: 1.5rem 0 0.75rem;
+}
+
+.page-content p {
+    margin: 0 0 1rem;
+}
+
+.content-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 20px rgba(44, 36, 22, 0.08);
+    border: 1px solid rgba(235, 228, 217, 0.8);
+}
+
+.page-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(44, 36, 22, 0.08);
+}
+
+.page-content table th {
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 0.9rem;
+    background-color: var(--color-chalkboard);
+    color: #fff;
+    padding: 1rem 1.25rem;
+    text-align: left;
+}
+
+.page-content table td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--color-cream);
+    color: var(--color-text);
+}
+
+.page-content table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.page-content table tbody tr:hover {
+    background-color: var(--color-surface);
+}
+
+.page-image {
+    margin: 1.5rem 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(44, 36, 22, 0.1);
+}
+
+.page-image img {
+    width: 100%;
+    display: block;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 992px) {
+    .art-grid,
+    .breakfast-inner,
+    .jibarito-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tasty-card {
+        grid-template-columns: 1fr;
+    }
+
+    .jibarito-main {
+        flex-direction: column;
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .art-badge {
+        font-size: 0.7rem;
+        padding: 0.7rem 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.25rem;
+    }
+
+    .page-hero {
+        min-height: 35vh;
+    }
+}

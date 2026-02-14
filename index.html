@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gustese — Pastry with love</title>
-    <link rel="stylesheet" href="styles/mystyles.css">
-    <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -32,7 +30,9 @@
                 </a>
                 <a href="#" aria-label="Instagram" class="social-link">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/>
+                        <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8z"/>
+                        <path d="M18.406 5.155a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
                     </svg>
                 </a>
                 <a href="#" aria-label="Twitter" class="social-link">
@@ -45,38 +45,34 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section id="hero" class="hero">
             <img class="hero-image" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200" alt="Fresh bread on wooden board">
             <div class="hero-overlay"></div>
             <div class="hero-inner layout-fixed">
                 <h1 class="hero-title">Pastry with love</h1>
-                <p class="hero-subtitle" style="text-indent: 0;">We're bringing you fresh ingredients every day in ways you can't resist.</p>
+                <p class="hero-subtitle">We're bringing you fresh ingredients every day in ways you can't resist.</p>
                 <a href="menu.html" class="btn btn-hero">OUR MENU</a>
             </div>
         </section>
 
-        <!-- Art of Cakes Section -->
         <section id="art-of-cakes" class="art-of-cakes">
             <div class="art-of-cakes-inner layout-fixed">
-                <h2 class="section-heading" style="color: #2c2416; font-style: italic;">Art of cakes</h2>
+                <h2 class="section-heading">Art of cakes</h2>
                 <p class="section-subtitle">WE CREATE DELICIOUS MEMORIES</p>
                 <div class="art-grid">
                     <div class="art-text">
-                        <p class="art-description" style="text-indent: 1.5em; line-height: 1.65; font-size: 1rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                        <p class="art-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
                         <p class="chef-label">Chef Cook</p>
                         <div class="chef-profiles">
                             <div class="chef-avatar" style="background-image: url('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=150')" title="Benito"></div>
                             <div class="chef-avatar" style="background-image: url('https://images.unsplash.com/photo-1583394293214-28abd15c1c08?w=150')" title="Gaspare"></div>
                         </div>
-                        <blockquote class="art-quote"><b style="font-weight: 700;">We create delicious memories</b></blockquote>
+                        <blockquote class="art-quote">We create delicious memories</blockquote>
                     </div>
                     <div class="art-images">
                         <div class="art-grid-images">
                             <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=400" alt="Cake ingredients - flour">
-                            <img src="https://images.unsplash.com/photo-1484723091734-89a1e58d0e5c?w=400" alt="Toast with egg">
                             <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400" alt="Chocolate cake">
-                            <img src="https://images.unsplash.com/photo-1606313564200-e75a69796bca?w=400" alt="Brownies with strawberries">
                         </div>
                         <div class="art-badge">TASTES SO GOOD!</div>
                     </div>
@@ -84,7 +80,6 @@
             </div>
         </section>
 
-        <!-- Tasty Pancakes Section -->
         <section id="tasty-pancakes" class="tasty-pancakes">
             <div class="tasty-inner layout-fixed">
                 <div class="tasty-bg"></div>
@@ -94,9 +89,9 @@
                     </div>
                     <div class="tasty-card-content">
                         <span class="tasty-badge">READY IN <strong>40 mins</strong></span>
-                        <h2 class="tasty-title" style="font-style: italic; color: #2c2416;">Tasty pancakes</h2>
+                        <h2 class="tasty-title">Tasty pancakes</h2>
                         <p class="tasty-subtitle">SEASON FAVOURITE</p>
-                        <p class="tasty-description" style="text-indent: 1.5em; line-height: 1.65;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p class="tasty-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div class="tasty-carousel">
                             <span class="carousel-dot active"></span>
                             <span class="carousel-dot"></span>
@@ -107,11 +102,10 @@
             </div>
         </section>
 
-        <!-- Breakfast Menu Section -->
         <section id="breakfast" class="breakfast">
             <div class="breakfast-inner layout-fixed">
                 <div class="breakfast-left">
-                    <h2 class="breakfast-title" style="font-style: italic;">Breakfast</h2>
+                    <h2 class="breakfast-title">Breakfast</h2>
                     <p class="breakfast-tagline">YUM BREAKFAST! WE'RE OPEN!</p>
                     <ul class="menu-list">
                         <li>
@@ -138,40 +132,39 @@
                     <article class="breakfast-card">
                         <p class="card-est">EST. 1993</p>
                         <h3 class="card-title">Your morning Escape with Flair</h3>
-                        <p class="card-text" style="text-indent: 1.5em; line-height: 1.65;"><b style="font-weight: 700;">Lorem ipsum</b> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="btn btn-read">READ</a>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="news.html" class="btn btn-read">READ</a>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- The Jibarito Sandwich Section -->
         <section id="jibarito" class="jibarito">
             <div class="jibarito-inner layout-fixed">
-                <h2 class="section-heading" style="font-style: italic; color: #2c2416;">The Jibarito sandwich</h2>
+                <h2 class="section-heading">The Jibarito sandwich</h2>
                 <p class="section-subtitle">THE BEST SANDWICH YOU'VE EVER TASTED!</p>
                 <div class="jibarito-grid">
                     <div class="jibarito-features">
                         <div class="feature-item">
                             <div class="feature-icon">🌾</div>
                             <h3>Class aptent</h3>
-                            <p style="text-indent: 0; line-height: 1.65;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">🥚</div>
                             <h3>Nulla eget</h3>
-                            <p style="text-indent: 0; line-height: 1.65;">Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">🧈</div>
                             <h3>Sed nibh purus</h3>
-                            <p style="text-indent: 0; line-height: 1.65;">Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation.</p>
                         </div>
                     </div>
                     <div class="jibarito-main">
                         <div class="jibarito-image-wrap">
                             <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=600" alt="The Jibarito sandwich">
-                            <a href="#" class="btn btn-recipe">FULL RECIPE</a>
+                            <a href="menu.html" class="btn btn-recipe">FULL RECIPE</a>
                         </div>
                         <div class="jibarito-times">
                             <div class="time-box">
@@ -198,10 +191,10 @@
             <nav class="footer-nav">
                 <a href="menu.html">OUR MENU</a>
                 <a href="news.html">GALLERY</a>
-                <a href="#culture">CULTURE</a>
-                <a href="#" class="footer-logo">Gustese</a>
-                <a href="#events">EVENTS</a>
-                <a href="#catering">CATERING</a>
+                <a href="welcome.html">CULTURE</a>
+                <a href="index.html" class="footer-logo">Gustese</a>
+                <a href="news.html">EVENTS</a>
+                <a href="reservations.html">CATERING</a>
                 <a href="contact.html">VISIT US</a>
             </nav>
         </div>
