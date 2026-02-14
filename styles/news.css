@@ -1,0 +1,5 @@
+/* news.css — Стилі сторінки News */
+
+.page-content .content-card.news-card {
+    border-left: 4px solid var(--color-accent);
+}

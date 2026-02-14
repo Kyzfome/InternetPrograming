@@ -1,0 +1,5 @@
+/* contact.css — Стилі сторінки Contact */
+
+.page-content .content-card.contact-card {
+    background: var(--color-surface);
+}

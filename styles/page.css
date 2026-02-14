@@ -1,0 +1,152 @@
+/* page.css — Стилі внутрішніх сторінок (welcome, menu, reservations, news, contact) */
+
+/* Стилістична банер-секція на кожній сторінці */
+.page-hero {
+    position: relative;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 4.5rem;
+}
+
+.page-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(44, 36, 22, 0.5);
+    z-index: 1;
+}
+
+.page-hero-inner {
+    position: relative;
+    z-index: 2;
+    padding: 4rem 2rem;
+}
+
+.page-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    font-style: italic;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.page-hero .page-hero-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0.5rem 0 0;
+    letter-spacing: 0.1em;
+}
+
+/* Контентна область */
+.page-main {
+    padding: 4rem 0;
+    background-color: var(--color-bg);
+}
+
+.page-content {
+    padding: 2rem 0;
+}
+
+.page-content h1 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-text);
+    margin: 0 0 0.5rem;
+    border-bottom: 2px solid var(--color-cream);
+    padding-bottom: 0.5rem;
+}
+
+.page-content h2 {
+    font-size: 1.25rem;
+    color: var(--color-accent);
+    margin: 2rem 0 1rem;
+}
+
+.page-content p {
+    margin: 0 0 1rem;
+}
+
+/* Картки контенту */
+.content-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 20px rgba(44, 36, 22, 0.08);
+    border: 1px solid var(--color-cream);
+}
+
+/* Таблиці — естетичні стилі */
+.page-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(44, 36, 22, 0.08);
+}
+
+.page-content table th {
+    font-family: var(--font-main);
+    font-weight: 700;
+    background-color: var(--color-chalkboard);
+    color: #fff;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.page-content table td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--color-cream);
+    color: var(--color-text);
+}
+
+.page-content table tbody tr:hover {
+    background-color: var(--color-surface);
+}
+
+.page-content table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Зображення на сторінках */
+.page-content .page-image {
+    margin: 2rem 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(44, 36, 22, 0.12);
+}
+
+.page-content .page-image img {
+    width: 100%;
+    display: block;
+}
+
+/* Лабораторна 2 — впроваджена CSS (class селектори) */
+.margin-page {
+    margin: 0;
+    padding-top: 0;
+}
+
+.margin-section {
+    margin: 2rem 0;
+}
+
+.page-content img {
+    margin: 1rem 0;
+}

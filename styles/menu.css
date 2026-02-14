@@ -1,0 +1,5 @@
+/* menu.css — Стилі сторінки Menu */
+
+.page-content .content-card.menu-card {
+    background: linear-gradient(135deg, #fff 0%, var(--color-surface) 100%);
+}

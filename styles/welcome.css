@@ -1,0 +1,5 @@
+/* welcome.css — Стилі сторінки Welcome */
+
+.page-hero-welcome .page-hero-image {
+    object-position: center 30%;
+}

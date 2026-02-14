@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gustese — Reservations</title>
-    <link rel="stylesheet" href="mystyles.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/mystyles.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/page.css">
+    <link rel="stylesheet" href="styles/reservations.css">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
-        .margin-page { margin: 1rem 2rem; padding-top: 5rem; }
+        .margin-page { margin: 0; }
         .margin-section { margin: 2rem 0; }
-        img { margin: 1rem; }
+        .page-content img { margin: 1rem 0; }
         table th { font-family: "Alegreya", Georgia, serif; font-weight: 700; }
     </style>
 </head>
@@ -35,30 +37,40 @@
         </div>
     </header>
 
-    <main class="margin-page">
-        <section class="page-content layout-fixed margin-section">
+    <section class="page-hero page-hero-reservations">
+        <img class="page-hero-image" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200" alt="Ресторан">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-inner layout-fixed">
             <h1>Reservations</h1>
-            <h2 style="color: #8b6914; font-size: 1.4rem;">Забронюйте стіл</h2>
-            <p style="text-indent: 1.5em;">
-                Зателефонуйте нам або залиште заявку, щоб <b style="font-weight: 700; color: #2c2416;">забронювати стіл</b>. Ми раді приймати гостей щодня.
-            </p>
-            <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse;">
-                <thead>
-                    <tr>
-                        <th>День</th>
-                        <th>Години роботи</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Пн — Пт</td><td>8:00 — 20:00</td></tr>
-                    <tr><td>Субота</td><td>9:00 — 21:00</td></tr>
-                    <tr><td>Неділя</td><td>9:00 — 18:00</td></tr>
-                </tbody>
-            </table>
-            <p style="text-indent: 1.5em; margin-top: 1.5rem;">
-                Телефон для резервації: <b style="font-weight: 700;">+38 (044) 123-45-67</b>
-            </p>
-        </section>
+            <p class="page-hero-subtitle">Забронюйте стіл</p>
+        </div>
+    </section>
+
+    <main class="page-main">
+        <div class="page-content layout-fixed margin-section">
+            <div class="content-card">
+                <h2 style="color: #8b6914; font-size: 1.4rem;">Години роботи</h2>
+                <p style="text-indent: 1.5em;">
+                    Зателефонуйте нам або залиште заявку, щоб <b style="font-weight: 700; color: #2c2416;">забронювати стіл</b>. Ми раді приймати гостей щодня.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>День</th>
+                            <th>Години роботи</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Пн — Пт</td><td>8:00 — 20:00</td></tr>
+                        <tr><td>Субота</td><td>9:00 — 21:00</td></tr>
+                        <tr><td>Неділя</td><td>9:00 — 18:00</td></tr>
+                    </tbody>
+                </table>
+                <p style="text-indent: 1.5em; margin-top: 1.5rem;">
+                    Телефон для резервації: <b style="font-weight: 700;">+38 (044) 123-45-67</b>
+                </p>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
