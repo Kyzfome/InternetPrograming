@@ -1,0 +1,48 @@
+/* mystyles.css — Зв'язана CSS (Лабораторна 2) */
+
+/* Колір фону, колір символів */
+body {
+    background-color: #faf7f2;
+    color: #2c2416;
+}
+
+/* Пріоритетність використання шрифтів */
+body {
+    font-family: "Alegreya", "Playfair Display", Georgia, serif;
+}
+
+/* Розмір та колір заголовків 1-го рівня */
+h1 {
+    font-size: 2.25rem;
+    color: #2c2416;
+}
+
+/* Відображення курсивом заголовків 2-го рівня */
+h2 {
+    font-style: italic;
+}
+
+/* Вид маркерів у списках */
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+/* Гіперпосилання — колір та зміна при наведенні */
+a {
+    color: #8b6914;
+}
+
+a:hover {
+    color: #a67c1a;
+}
+
+/* Абзац: міжрядковий інтервал, абзацний відступ, кегль, розмір шрифту */
+p {
+    line-height: 1.65;
+    text-indent: 1.5em;
+    font-size: 1rem;
+}
